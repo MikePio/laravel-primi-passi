@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//* nome che compare dopo la porta del server (http://127.0.0.1:8000/)
+//*         ↓
 Route::get('/', function () {
     return view('home');
-});
+  })->name('home');
+
+//* nome che compare dopo la porta del server (http://127.0.0.1:8000/)
+//*            ↓
+Route::get('/about-us', function () {
+  return view('about');
+})->name('about');
